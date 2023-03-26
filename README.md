@@ -17,3 +17,28 @@ CREATE TABLE users (
   location TEXT
 );
 ```
+
+## Build Development Docker Image
+
+```bash
+docker build --target development  -t golang:dev .
+```
+
+## Build Production Docker Image
+
+```bash
+docker build --target production  -t golang:prod .
+```
+
+## Run Development Docker Image
+
+```bash
+docker run -it --rm -p 8080:8080 golang:dev
+```
+
+## Run Production Docker Image
+
+```bash
+docker run -it --rm -p 8080:8080 golang:prod
+```
+
