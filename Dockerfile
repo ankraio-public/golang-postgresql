@@ -26,7 +26,7 @@ RUN rm -rf /go/src/app/*
 CMD ["/go/bin/main"]
 
 ## Deploy ######################################################################
-FROM alpine:latest as deploy
+FROM alpine:3.18.3 as deploy
 WORKDIR /go/src/app
 COPY --from=production /go/bin/main .
 RUN apk --no-cache add ca-certificates
